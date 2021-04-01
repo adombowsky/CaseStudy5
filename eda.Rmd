@@ -9,8 +9,21 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Loading data
-```{r}
+# Cleaning data
 
+```{r}
+# loading and cleaning
+temp = list.files(pattern="*.csv")
+opiod = lapply(temp, read.csv)
+names(opiod) = c("AD1", "ASD", "ASE", "ASF", "ASG", "ASI", "ASM", "ASP", "DEM", "DSM", "EOM", "FND", "INF", "LAB", "main", "MHX", "MOT", "NMS", 
+                 "QLP", "QOL", "VIS")
+
+# saving
+save(opiod, file = "opiod.RData")
+```
+
+# Loading Data
+```{r}
+load("opiod.RData")
 ```
 
