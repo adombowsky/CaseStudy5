@@ -7,6 +7,8 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(purrr)
+library(dplyr)
 ```
 
 # Cleaning data
@@ -27,3 +29,19 @@ save(opiod, file = "opiod.RData")
 load("opiod.RData")
 ```
 
+# Making into 1 data frame (might be useful)
+```{r}
+opiod_df <- opiod %>% reduce(full_join, by = "PATID")
+```
+
+# Notes on Design
+## Initial Design
+* CTN-0051 is an $N = 600$, multi-site, two arm, 6 month, parallel group, open label, randomized controlled trial to examine the comparitive effectiveness of XR-NTX vs. BUP-NX
+* XR-NTX is administered by injection on an approximately every-four-week basis
+* BUP-NX is provided for take-home daily sublingual dosing
+* Recruitment completed in May, 2016, with N=772 participants consented, N=570 randomized (N=352 of them late randomizers). As of July 25, 2016, N=436 have completed the study
+
+## Final Results
+* Between Jan 30, 2014, and May 25, 2016, we randomly assigned 570 participants to receive XR-NTX (n=283) or BUP-NX (n=287).
+* 204 participants inducted to XR-NTX treatment completed an average of 3·9 monthly injections (about 16 weeks treatment); 96 (47%) did not end medication early and completed the planned 24 week treatment phase
+* 270 participants inducted to BUP-NX treatment completed a median of 14 weeks of treatment
