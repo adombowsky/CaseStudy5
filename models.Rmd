@@ -1,0 +1,164 @@
+---
+title: "Models"
+author: "Alex Dombowsky"
+date: "4/7/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(truncnorm)
+library(mvtnorm)
+library(coda)
+library(spBayesSurv)
+library(survival)
+library(rstanarm)
+library(bayestestR)
+library(dplyr)
+library(purrr)
+```
+
+# Loading Data/DF
+```{r}
+load("opiod.RData")
+main = opiod$main
+asd = opiod$ASD
+asg = opiod$ASG
+asm = opiod$ASM
+asp = opiod$ASP
+asi = opiod$ASI
+dem = opiod$DEM
+dsm = opiod$DSM
+eom = opiod$EOM
+nms = opiod$NMS
+qol = opiod$QOL
+qlp = opiod$QLP
+fnd = opiod$FND
+mhx = opiod$MHX
+vis = opiod$VIS
+
+op_list = list(main, asd, asg, asm, asp, asi, dem, dsm, eom, nms, qol, qlp, fnd, mhx, vis)
+opiod_df <- op_list %>% reduce(full_join, by = "PATID")
+opiod_df <- opiod_df[, !grepl("X.", colnames(opiod_df), fixed = T)]
+# adding adverse events
+ad1 = opiod$AD1
+adv = function(x, names){
+  return(ifelse(x %in% names,1, 0))
+}
+patid <- main$PATID
+opiod_df$adverse = sapply(patid, adv, names = ad1$PATID)
+
+```
+
+# Accelerated Failure Time Model
+
+```{r}
+# note: observations must be organized so that the first n_obs are not censored, while the last are censored
+
+relapse_gibbs <- function(R, B, L_obs, delta, l_c, p, X, beta_0, Sigma_0, a, b.sq){
+  # formalities
+  n = length(delta)
+  n_obs = sum(delta)
+  n_cens = n - sum(delta)
+  Sigma_inv = solve(Sigma_0)
+  # storage
+  beta = matrix(NA, ncol = p, nrow = R)
+  phi = c()
+  g = c()
+  beta[1, ] <- rep(1, p)
+  phi[1] = 1
+  g[1] = 1
+  L_cens = matrix(NA, ncol = n_cens, nrow = R)
+  L_cens[1, ] <- l_c + 10
+  
+  # sampling
+  for (j in 2:R) {
+  # sample missing times
+      L_cens[j, ] = rtruncnorm(n_cens, a = l_c, b = rep(Inf, n_cens), mean = X[1:n_cens, ] %*% beta[j-1, ], 1/sqrt(phi[j-1]) )
+      L = c(L_cens[j, ], L_obs)
+  # sample beta
+      mn = crossprod(X, L) + (1/g[j-1]) * Sigma_inv %*% beta_0
+      v = solve(crossprod(X,X) + (1/g[j-1]) * Sigma_inv)
+      beta[j, ] <- rmvnorm(1, v %*% mn, v/phi[j-1])
+      
+  # sample phi
+    a_star = (a + p + n)/2
+    b_star = (crossprod((L - X %*% beta[j, ]), (L - X %*% beta[j, ])) + (1/g[j-1]) * crossprod(beta[j, ] - beta_0, Sigma_inv %*% (beta[j, ] - beta_0)) + a*b.sq)/2
+    phi[j] <- rgamma(1, a_star, b_star)
+  # sample g
+      a_star = (1+p)/2
+      b_star = (phi[j] * t(beta[j, ] - beta_0) %*% Sigma_inv %*% (beta[j, ] - beta_0) + n)/2
+      g[j] = 1/rgamma(1, a_star, b_star)
+    
+  }
+  
+  # discard burn-in
+  beta <- beta[B:R, ]
+  L_cens <- L_cens[B:R, ]
+  phi <- phi[B:R]
+  g = g[B:R]
+  return(list(beta = beta, L_cens = L_cens, phi = phi, g = g))
+  
+}
+
+
+```
+
+Testing the Gibbs sampler:
+```{r}
+
+opiod_df <- with(opiod_df, opiod_df[order(event),])
+opiod_df <- opiod_df[!is.na(opiod_df$event), ]
+R = 10000
+B = 2000
+L_obs = log(opiod_df$time[opiod_df$event == 1])
+l_c = log(opiod_df$time[opiod_df$event==0])
+delta = opiod_df$event
+X = model.matrix(lm(time ~ TRTSHOWN, data = opiod_df))
+p = ncol(X)
+beta_0 = rep(0,p)
+Sigma_0 = solve(crossprod(X,X))
+a = 2
+b.sq = 1
+
+test = relapse_gibbs(R, B, L_obs, delta, l_c, p, X, beta_0, Sigma_0, a, b.sq)
+
+beta = test$beta
+phi = test$phi
+L_cens = test$L_cens
+
+```
+
+# Cox Proportional Hazard Regression
+```{r}
+# fitting a model
+mcmc=list(nburn=1000, nsave=5000, nskip=0, ndisplay=1000)
+prior = list()
+
+cph_fit <- indeptCoxph(Surv(time, event) ~ TRTSHOWN + VIWTLBS + DEGENDER,
+                       data = opiod_df, 
+                       mcmc = mcmc)
+summary(cph_fit)
+beta = cph_fit$beta
+
+
+GetCurves(cph_fit, opiod_df[1:2, ], CI = .95)
+```
+
+# Logistic regression model
+Can fit with rstan arm pretty easily:
+
+```{r}
+f = inducted ~ TRTSHOWN + VIWTLBS + DEGENDER + FNSMOKE + DSALC12M + MHMDDC + NMMTHLTH
+
+ind_fit <- stan_glm(f, 
+                    prior = cauchy(0, 2.5),
+                    prior_intercept = cauchy(0,10),
+                    iter = 5000,
+                    chains = 1,
+                    family = "binomial",
+                    data = ind_failure)
+bf <- bayesfactor_parameters(ind_fit, null = 0)
+bf
+```
+

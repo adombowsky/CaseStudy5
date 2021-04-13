@@ -1,0 +1,1499 @@
+scan = 1000
+scan = 1000
+scan = 2000
+scan = 3000
+scan = 4000
+scan = 5000
+scan = 1000
+scan = 1000
+scan = 2000
+scan = 3000
+scan = 4000
+scan = 5000
+scan = 6000
+scan = 7000
+scan = 8000
+scan = 9000
+scan = 10000
+Cox PH model with piecewise constant baseline hazards
+Call:
+indeptCoxph(formula = f, data = opiod_df, mcmc = mcmc)
+
+Posterior inference of regression coefficients
+(Adaptive M-H acceptance rate: 0.1722):
+                                    Mean       Median     Std. Dev.  95%CI-Low  95%CI-Upp
+TRTSHOWNXR-NTX                       0.102724   0.109366   0.223744  -0.325625   0.520163
+I(MHOPIWDL > 5)TRUE                  0.231542   0.227885   0.170353  -0.073824   0.571182
+adverse                             -0.260660  -0.261199   0.168579  -0.579815   0.066444
+I(ADOPI30D > 0)TRUE                 -0.464587  -0.463658   0.167736  -0.796692  -0.129552
+TRTSHOWNXR-NTX:I(MHOPIWDL > 5)TRUE   0.117266   0.117224   0.230301  -0.342753   0.553913
+TRTSHOWNXR-NTX:adverse               0.001954  -0.004540   0.236800  -0.468526   0.456923
+TRTSHOWNXR-NTX:I(ADOPI30D > 0)TRUE   0.230846   0.228927   0.219540  -0.191908   0.659459
+
+Log pseudo marginal likelihood: LPML=-1991.736
+Number of subjects: n=553
+Cox PH model with piecewise constant baseline hazards
+Call:
+indeptCoxph(formula = f, data = opiod_df, mcmc = mcmc)
+
+Posterior inference of regression coefficients
+(Adaptive M-H acceptance rate: 0.1722):
+                                    Mean       Median     Std. Dev.  95%CI-Low  95%CI-Upp
+TRTSHOWNXR-NTX                       0.102724   0.109366   0.223744  -0.325625   0.520163
+I(MHOPIWDL > 5)TRUE                  0.231542   0.227885   0.170353  -0.073824   0.571182
+adverse                             -0.260660  -0.261199   0.168579  -0.579815   0.066444
+I(ADOPI30D > 0)TRUE                 -0.464587  -0.463658   0.167736  -0.796692  -0.129552
+TRTSHOWNXR-NTX:I(MHOPIWDL > 5)TRUE   0.117266   0.117224   0.230301  -0.342753   0.553913
+TRTSHOWNXR-NTX:adverse               0.001954  -0.004540   0.236800  -0.468526   0.456923
+TRTSHOWNXR-NTX:I(ADOPI30D > 0)TRUE   0.230846   0.228927   0.219540  -0.191908   0.659459
+
+Log pseudo marginal likelihood: LPML=-1991.736
+Number of subjects: n=553
+scan = 1000
+scan = 2000
+scan = 3000
+scan = 4000
+scan = 5000
+scan = 6000
+scan = 7000
+scan = 8000
+scan = 9000
+scan = 10000
+Cox PH model with piecewise constant baseline hazards
+Call:
+indeptCoxph(formula = f, data = opiod_df, mcmc = mcmc)
+
+Posterior inference of regression coefficients
+(Adaptive M-H acceptance rate: 0.169):
+                                         Mean      Median    Std. Dev.  95%CI-Low  95%CI-Upp
+TRTSHOWNXR-NTX                            0.09931   0.09974   0.23259   -0.35550    0.54992 
+I(MHOPIWDL > 5)TRUE                       0.34010   0.34066   0.21409   -0.10185    0.72681 
+adverse                                  -0.02912  -0.01951   0.26823   -0.56434    0.46936 
+I(ADOPI30D > 0)TRUE                      -0.59064  -0.59571   0.24636   -1.02919   -0.08674 
+TRTSHOWNXR-NTX:I(MHOPIWDL > 5)TRUE        0.14784   0.15309   0.23808   -0.31746    0.62810 
+TRTSHOWNXR-NTX:adverse                   -0.01690  -0.01129   0.22853   -0.44810    0.43502 
+TRTSHOWNXR-NTX:I(ADOPI30D > 0)TRUE        0.23608   0.23914   0.22810   -0.24212    0.68463 
+I(MHOPIWDL > 5)TRUE:adverse              -0.36653  -0.36475   0.25175   -0.84440    0.13586 
+I(MHOPIWDL > 5)TRUE:I(ADOPI30D > 0)TRUE   0.07331   0.06885   0.23724   -0.39920    0.53697 
+adverse:I(ADOPI30D > 0)TRUE               0.06932   0.06423   0.23066   -0.36467    0.50020 
+
+Log pseudo marginal likelihood: LPML=-1993.298
+Number of subjects: n=553
+Cox PH model with piecewise constant baseline hazards
+Call:
+indeptCoxph(formula = f, data = opiod_df, mcmc = mcmc)
+
+Posterior inference of regression coefficients
+(Adaptive M-H acceptance rate: 0.169):
+                                         Mean      Median    Std. Dev.  95%CI-Low  95%CI-Upp
+TRTSHOWNXR-NTX                            0.09931   0.09974   0.23259   -0.35550    0.54992 
+I(MHOPIWDL > 5)TRUE                       0.34010   0.34066   0.21409   -0.10185    0.72681 
+adverse                                  -0.02912  -0.01951   0.26823   -0.56434    0.46936 
+I(ADOPI30D > 0)TRUE                      -0.59064  -0.59571   0.24636   -1.02919   -0.08674 
+TRTSHOWNXR-NTX:I(MHOPIWDL > 5)TRUE        0.14784   0.15309   0.23808   -0.31746    0.62810 
+TRTSHOWNXR-NTX:adverse                   -0.01690  -0.01129   0.22853   -0.44810    0.43502 
+TRTSHOWNXR-NTX:I(ADOPI30D > 0)TRUE        0.23608   0.23914   0.22810   -0.24212    0.68463 
+I(MHOPIWDL > 5)TRUE:adverse              -0.36653  -0.36475   0.25175   -0.84440    0.13586 
+I(MHOPIWDL > 5)TRUE:I(ADOPI30D > 0)TRUE   0.07331   0.06885   0.23724   -0.39920    0.53697 
+adverse:I(ADOPI30D > 0)TRUE               0.06932   0.06423   0.23066   -0.36467    0.50020 
+
+Log pseudo marginal likelihood: LPML=-1993.298
+Number of subjects: n=553
+Cox PH model with piecewise constant baseline hazards
+Call:
+indeptCoxph(formula = f, data = opiod_df, mcmc = mcmc)
+
+Posterior means for regression coefficients:
+                         TRTSHOWNXR-NTX                      I(MHOPIWDL > 5)TRUE  
+                                0.09931                                  0.34010  
+                                adverse                      I(ADOPI30D > 0)TRUE  
+                               -0.02912                                 -0.59064  
+     TRTSHOWNXR-NTX:I(MHOPIWDL > 5)TRUE                   TRTSHOWNXR-NTX:adverse  
+                                0.14784                                 -0.01690  
+     TRTSHOWNXR-NTX:I(ADOPI30D > 0)TRUE              I(MHOPIWDL > 5)TRUE:adverse  
+                                0.23608                                 -0.36653  
+I(MHOPIWDL > 5)TRUE:I(ADOPI30D > 0)TRUE              adverse:I(ADOPI30D > 0)TRUE  
+                                0.07331                                  0.06932  
+
+LPML: -1993.298
+n=553
+Cox PH model with piecewise constant baseline hazards
+Call:
+indeptCoxph(formula = f, data = opiod_df, mcmc = mcmc)
+
+Posterior inference of regression coefficients
+(Adaptive M-H acceptance rate: 0.169):
+                                         Mean      Median    Std. Dev.  95%CI-Low  95%CI-Upp
+TRTSHOWNXR-NTX                            0.09931   0.09974   0.23259   -0.35550    0.54992 
+I(MHOPIWDL > 5)TRUE                       0.34010   0.34066   0.21409   -0.10185    0.72681 
+adverse                                  -0.02912  -0.01951   0.26823   -0.56434    0.46936 
+I(ADOPI30D > 0)TRUE                      -0.59064  -0.59571   0.24636   -1.02919   -0.08674 
+TRTSHOWNXR-NTX:I(MHOPIWDL > 5)TRUE        0.14784   0.15309   0.23808   -0.31746    0.62810 
+TRTSHOWNXR-NTX:adverse                   -0.01690  -0.01129   0.22853   -0.44810    0.43502 
+TRTSHOWNXR-NTX:I(ADOPI30D > 0)TRUE        0.23608   0.23914   0.22810   -0.24212    0.68463 
+I(MHOPIWDL > 5)TRUE:adverse              -0.36653  -0.36475   0.25175   -0.84440    0.13586 
+I(MHOPIWDL > 5)TRUE:I(ADOPI30D > 0)TRUE   0.07331   0.06885   0.23724   -0.39920    0.53697 
+adverse:I(ADOPI30D > 0)TRUE               0.06932   0.06423   0.23066   -0.36467    0.50020 
+
+Log pseudo marginal likelihood: LPML=-1993.298
+Number of subjects: n=553
+                                                       
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0048                                          
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0047                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0044                                                                               
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0043                                                   
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0042                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse
+prop.  0.0042                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0041                                                               
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0041                                                                               
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0040                                                                                            
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0039                                                                     
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0038                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0038                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0037                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0036                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0035                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0035                                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,FNSMOKE
+prop.  0.0034                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0034                                                                                                 
+       TRTSHOWNXR-NTX,I(ADOPI30D > 0)TRUE,ASBRTHDT  I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE
+prop.  0.0032                                       0.0031                                 
+       TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0031                                             
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0029                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0029                                                                               
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0029                                                                              
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0028                                                                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0028                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0028                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0028                                                                                  
+       adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0027                     
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0027                                                                        
+       I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0026                                       
+       TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0026                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0026                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0026                                                                                
+       VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0025                           
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0025                                                        
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0025                                                   
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0025                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0025                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0025                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0025                                                                               
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0023                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0023                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse
+prop.  0.0023                                                            
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0022                                                    
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0022                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0022                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0022                                                                                
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0021                                                       
+       TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE  I(ADOPI30D > 0)TRUE
+prop.  0.0021                                              0.0020             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,ASBRTHDT
+prop.  0.0020                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0020                                                                 
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0019                                                 
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0019                                                                                   
+       TRTSHOWNXR-NTX,I(ADOPI30D > 0)TRUE,AMCHRMPR  TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0019                                       0.0019                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0019                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0019                                                                                         
+       TRTSHOWNXR-NTX,I(ADOPI30D > 0)TRUE,DEGENDER  TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0018                                       0.0018                                             
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0018                                                              
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0018                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0018                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,I(ADOPI30D > 0)TRUE
+prop.  0.0018                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0018                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0018                                                                       
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0017                                                                          
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0017                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0017                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,ASBRTHDT
+prop.  0.0017                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0017                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0017                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0017                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse
+prop.  0.0017                                                                    
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0016                                                        
+       TRTSHOWNXR-NTX,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0016                                    
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0016                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,I(ADOPI30D > 0)TRUE
+prop.  0.0016                                    
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0016                                                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0016                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0016                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE
+prop.  0.0016                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0016                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0016                                                                                        
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0015                                                                 
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0015                                                           
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0015                                                               
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0015                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0015                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0015                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0015                                                                                                
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0014                                                        
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0014                                                                          
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE
+prop.  0.0014                                              
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0014                                                                              
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0014                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0014                                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse
+prop.  0.0014                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0014                                                                                        
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0013                                                  
+       TRTSHOWNXR-NTX,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0013                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0013                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0013                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0013                                                                                                 
+       VIBMI,I(ADOPI30D > 0)TRUE  I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0012                     0.0012                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0012                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0012                                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0012                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0012                                                                                       
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE  TRTSHOWNXR-NTX,VIBMI,adverse
+prop.  0.0011                                                     0.0011                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0011                                                            
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0011                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0011                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI
+prop.  0.0011                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0011                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0011                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0011                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0011                                                                                                          
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0010                                                    
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0010                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0010                                                                    
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0010                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0010                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0010                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0010                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0010                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0010                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0010                                                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0010                                                                       
+       factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE  factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0009                                       0.0009                                             
+       I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0009                                                          
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0009                                                    
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0009                                                             
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0009                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse
+prop.  0.0009                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,DEGENDER
+prop.  0.0009                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0009                                                                                                  
+       factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0008                                                      
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0008                                                                
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0008                                                         
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0008                                                                         
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE
+prop.  0.0008                                              
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0008                                                  
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0008                                                   
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0008                                                           
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0008                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,ASBRTHDT
+prop.  0.0008                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0008                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0008                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0008                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0008                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0008                                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0008                                                                                                          
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0007                                                           
+       TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0007                                                      
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0007                                                            
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0007                                                            
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0007                                                               
+       TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0007                                                    
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0007                                                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0007                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0007                                                                               
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0007                                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE
+prop.  0.0007                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0007                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0007                                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0007                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0007                                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0007                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0007                                                                                                
+       VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR  factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0006                              0.0006                                             
+       NMRXMED,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0006                             
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0006                                                          
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE
+prop.  0.0006                                                   
+       I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0006                                                                  
+       I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0006                                               
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0006                                                   
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0006                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0006                                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0006                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0006                                                                                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0006                                                                                                
+       TRTSHOWNXR-NTX,NMRXMED,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0006                                             
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0006                                                   
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0006                                                            
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0006                                                                    
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0006                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0006                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,AMCHRMPR
+prop.  0.0006                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0006                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0006                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0006                                                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0006                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0006                                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0006                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0006                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,FNSMOKE
+prop.  0.0006                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0006                                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0006                                                                                                                   
+       adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT  VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0005                                0.0005                                   
+       VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE  NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0005                                              0.0005                           
+       I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0005                                          
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0005                                                  
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0005                                                          
+       I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0005                                                
+       I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0005                                                
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0005                                                                    
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER  TRTSHOWNXR-NTX,adverse
+prop.  0.0005                                                                    0.0005                
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0005                                                                    
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0005                                                       
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0005                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0005                                                                     
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0005                                                                              
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0005                                                                              
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0005                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0005                                                                     
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0005                                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0005                                                                                       
+       TRTSHOWNXR-NTX,NMRXMED,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0005                                            
+       TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0005                                                     
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE
+prop.  0.0005                                                      
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0005                                                                            
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0005                                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,FNSMOKE
+prop.  0.0005                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0005                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,AMCHRMPR
+prop.  0.0005                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT
+prop.  0.0005                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0005                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0005                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0005                                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0005                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0005                                                                                                 
+       VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER  VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0004                                      0.0004                                    
+       factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0004                                       
+       factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0004                                                      
+       NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0004                                             
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0004                                                          
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0004                                                           
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0004                                                                   
+       I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0004                                               
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,ASBRTHDT  I(MHOPIWDL > 5)TRUE,VIBMI,adverse,ASBRTHDT,DEGENDER
+prop.  0.0004                                      0.0004                                             
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0004                                                           
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0004                                                                 
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0004                                                                         
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0004                                                                                  
+       I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0004                                                                           
+       TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER  TRTSHOWNXR-NTX,VIBMI
+prop.  0.0004                                                        0.0004              
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0004                                                    
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0004                                                            
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0004                                                               
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0004                                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0004                                                                                 
+       TRTSHOWNXR-NTX,NMRXMED,adverse  TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0004                          0.0004                                                     
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0004                                                            
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0004                                                                   
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0004                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0004                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0004                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0004                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0004                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0004                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0004                                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0004                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0004                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0004                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0004                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0004                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0004                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0004                                                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0004                                                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0004                                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0004                                                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0004                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0004                                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0004                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0004                                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0004                                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0004                                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0004                                                                                                                   
+       adverse,I(ADOPI30D > 0)TRUE,FNSMOKE  adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE  VIBMI,adverse
+prop.  0.0003                               0.0003                                        0.0003       
+       factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0003                                                               
+       factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE  factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0003                                 0.0003                                       
+       NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE  NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0003                                     0.0003                                             
+       I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0003                                          
+       I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0003                                          
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0003                                                           
+       I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0003                                                         
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse
+prop.  0.0003                           
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0003                                                                
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0003                                                                
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0003                                                                 
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse
+prop.  0.0003                                             
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0003                                                                          
+       I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0003                                                        
+       I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0003                                                       
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0003                                                                                  
+       TRTSHOWNXR-NTX,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0003                                                            
+       TRTSHOWNXR-NTX,VIBMI,adverse,FNSMOKE  TRTSHOWNXR-NTX,VIBMI,adverse,ASBRTHDT
+prop.  0.0003                                0.0003                               
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0003                                                           
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0003                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0003                                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0003                                                       
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0003                                                       
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0003                                                               
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0003                                                                     
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE
+prop.  0.0003                                                                
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0003                                                                                       
+       TRTSHOWNXR-NTX,NMRXMED,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0003                                                     
+       TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0003                                                     
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0003                                                           
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0003                                                            
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0003                                                                   
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0003                                                                    
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0003                                                                       
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0003                                                                                
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0003                                                                             
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0003                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0003                                                                             
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0003                                                                                      
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0003                                                              
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0003                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,AMCHRMPR
+prop.  0.0003                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,ASBRTHDT,DEGENDER
+prop.  0.0003                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,ASBRTHDT,AMCHRMPR
+prop.  0.0003                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0003                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,ASBRTHDT,DEGENDER
+prop.  0.0003                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,ASBRTHDT,AMCHRMPR
+prop.  0.0003                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0003                                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,FNSMOKE
+prop.  0.0003                                                              
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0003                                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0003                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,ASBRTHDT,AMCHRMPR
+prop.  0.0003                                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse
+prop.  0.0003                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0003                                                                                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0003                                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,FNSMOKE
+prop.  0.0003                                                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0003                                                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0003                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,ASBRTHDT,DEGENDER
+prop.  0.0003                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE
+prop.  0.0003                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0003                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0003                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0003                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,FNSMOKE
+prop.  0.0003                                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0003                                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0003                                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0003                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0003                                                                                        
+       I(ADOPI30D > 0)TRUE,FNSMOKE  I(ADOPI30D > 0)TRUE,DEGENDER  I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0002                       0.0002                        0.0002                      
+       adverse,I(ADOPI30D > 0)TRUE,DEGENDER  adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0002                                0.0002                                      
+       VIBMI,ASBRTHDT,DEGENDER  VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0002                   0.0002                                     
+       VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT  VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0002                              0.0002                                     
+       VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0002                                    
+       VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0002                                                      
+       factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                                       
+       factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0002                                                         
+       factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0002                                                      
+       factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0002                                                              
+       NMRXMED,I(ADOPI30D > 0)TRUE  NMRXMED,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                       0.0002                             
+       NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0002                                            
+       NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0002                                                                      
+       NMRXMED,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0002                                               
+       I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,FNSMOKE  I(MHOPIWDL > 5)TRUE,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0002                                           0.0002                                      
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0002                                                           
+       I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0002                                            
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0002                                                                 
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                                                                   
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0002                                                                    
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                                                                         
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0002                                                                                  
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0002                                                         
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0002                                                                           
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                                                                                     
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                                                                         
+       TRTSHOWNXR-NTX,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR  TRTSHOWNXR-NTX,adverse,DEGENDER
+prop.  0.0002                                                0.0002                         
+       TRTSHOWNXR-NTX,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0002                                 
+       TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0002                                                              
+       TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0002                                                     
+       TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0002                                                      
+       TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0002                                                              
+       TRTSHOWNXR-NTX,VIBMI,DEGENDER  TRTSHOWNXR-NTX,VIBMI,ASBRTHDT,DEGENDER
+prop.  0.0002                         0.0002                                
+       TRTSHOWNXR-NTX,VIBMI,adverse,DEGENDER
+prop.  0.0002                               
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0002                                                       
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0002                                                                        
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0002                                                                     
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0002                                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse
+prop.  0.0002                                        
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0002                                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                                                              
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0002                                                               
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                                                                        
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0002                                                                         
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0002                                                                                       
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI  TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,DEGENDER
+prop.  0.0002                        0.0002                                       
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0002                                                                    
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0002                                                                                
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0002                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0002                                                                              
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0002                                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0002                                                                                      
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0002                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0002                                                                              
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0002                                                                             
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0002                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,ASBRTHDT
+prop.  0.0002                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0002                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,DEGENDER
+prop.  0.0002                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,ASBRTHDT,FNSMOKE
+prop.  0.0002                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse
+prop.  0.0002                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,AMCHRMPR
+prop.  0.0002                                                               
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0002                                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,FNSMOKE
+prop.  0.0002                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0002                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0002                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI
+prop.  0.0002                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0002                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,FNSMOKE
+prop.  0.0002                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0002                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0002                                                                               
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,DEGENDER
+prop.  0.0002                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,ASBRTHDT
+prop.  0.0002                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse
+prop.  0.0002                                                              
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0002                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0002                                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0002                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0002                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0002                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0002                                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0002                                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0002                                                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0002                                                                                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0002                                                                                                                           
+       DEGENDER  I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR  VIBMI,DEGENDER
+prop.  0.0001    0.0001                                 0.0001        
+       VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE  VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0001                             0.0001                                    
+       VIBMI,adverse,DEGENDER  VIBMI,adverse,DEGENDER,FNSMOKE  VIBMI,adverse,AMCHRMPR
+prop.  0.0001                  0.0001                          0.0001                
+       VIBMI,adverse,AMCHRMPR,FNSMOKE  VIBMI,adverse,ASBRTHDT  VIBMI,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0001                          0.0001                  0.0001                        
+       VIBMI,adverse,ASBRTHDT,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                          
+       VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                             
+       VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                            
+       VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                     
+       factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0001                                        
+       factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                
+       factor(QLANXDEP)3,adverse,ASBRTHDT,AMCHRMPR  factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                       0.0001                                             
+       factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0001                                                      
+       factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0001                                              
+       factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                       
+       factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT  factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0001                                    0.0001                                          
+       factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                     
+       factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                      
+       factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0001                                                
+       factor(QLANXDEP)2,VIBMI,ASBRTHDT,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                    
+       factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR  factor(QLANXDEP)2,VIBMI,adverse,DEGENDER
+prop.  0.0001                                                0.0001                                  
+       factor(QLANXDEP)2,VIBMI,adverse,AMCHRMPR,FNSMOKE
+prop.  0.0001                                          
+       factor(QLANXDEP)2,VIBMI,adverse,AMCHRMPR,DEGENDER
+prop.  0.0001                                           
+       factor(QLANXDEP)2,VIBMI,adverse,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                   
+       factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                     
+       factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0001                                                      
+       factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                         
+       factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                
+       NMRXMED,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                     
+       NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE  NMRXMED,VIBMI,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                0.0001                         
+       NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER  NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                      0.0001                                             
+       NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT  NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                      0.0001                                           
+       NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0001                                            
+       NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                            
+       NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                               
+       NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT,DEGENDER
+prop.  0.0001                                                   
+       NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                     
+       NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                              
+       NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                                 
+       I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE  I(MHOPIWDL > 5)TRUE,adverse,FNSMOKE
+prop.  0.0001                                                    0.0001                             
+       I(MHOPIWDL > 5)TRUE,adverse,ASBRTHDT
+prop.  0.0001                              
+       I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                                   
+       I(MHOPIWDL > 5)TRUE,VIBMI  I(MHOPIWDL > 5)TRUE,VIBMI,ASBRTHDT
+prop.  0.0001                     0.0001                            
+       I(MHOPIWDL > 5)TRUE,VIBMI,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                             
+       I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0001                                                        
+       I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                         
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,FNSMOKE  I(MHOPIWDL > 5)TRUE,VIBMI,adverse,DEGENDER,FNSMOKE
+prop.  0.0001                                     0.0001                                            
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                     
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                             
+       I(MHOPIWDL > 5)TRUE,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                                         
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                           
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                    
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0001                                                                  
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                           
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse
+prop.  0.0001                                             
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                              
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT,DEGENDER
+prop.  0.0001                                                               
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                        
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                                   
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                   
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                 
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                  
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                          
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                   
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0001                                                                          
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0001                                                                          
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                                   
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                                             
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                                            
+       I(MHOPIWDL > 5)TRUE,NMRXMED,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                         
+       I(MHOPIWDL > 5)TRUE,NMRXMED,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                  
+       I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                         
+       I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                   
+       I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                       
+       I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,ASBRTHDT
+prop.  0.0001                                            
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                           
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                                   
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0001                                                                            
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                                 
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,FNSMOKE
+prop.  0.0001                                                             
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                                  
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                         
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                                  
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT
+prop.  0.0001                                                                                
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                                                           
+       TRTSHOWNXR-NTX  TRTSHOWNXR-NTX,AMCHRMPR  TRTSHOWNXR-NTX,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0001          0.0001                   0.0001                                             
+       TRTSHOWNXR-NTX,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                      
+       TRTSHOWNXR-NTX,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER  TRTSHOWNXR-NTX,adverse,FNSMOKE
+prop.  0.0001                                                         0.0001                        
+       TRTSHOWNXR-NTX,adverse,AMCHRMPR  TRTSHOWNXR-NTX,adverse,ASBRTHDT
+prop.  0.0001                           0.0001                         
+       TRTSHOWNXR-NTX,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0001                                                     
+       TRTSHOWNXR-NTX,VIBMI,AMCHRMPR,DEGENDER  TRTSHOWNXR-NTX,VIBMI,ASBRTHDT,FNSMOKE
+prop.  0.0001                                  0.0001                               
+       TRTSHOWNXR-NTX,VIBMI,adverse,AMCHRMPR  TRTSHOWNXR-NTX,VIBMI,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0001                                 0.0001                                       
+       TRTSHOWNXR-NTX,VIBMI,adverse,ASBRTHDT,DEGENDER
+prop.  0.0001                                        
+       TRTSHOWNXR-NTX,VIBMI,adverse,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                                    
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                                    
+       TRTSHOWNXR-NTX,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                     
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                              
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                        
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                                              
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                               
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,AMCHRMPR
+prop.  0.0001                                                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT
+prop.  0.0001                                                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                              
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,ASBRTHDT
+prop.  0.0001                                   
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,AMCHRMPR
+prop.  0.0001                                         
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,adverse,FNSMOKE
+prop.  0.0001                                                
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,adverse,AMCHRMPR
+prop.  0.0001                                                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                              
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                             
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                                  
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                        
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse
+prop.  0.0001                                                          
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT
+prop.  0.0001                                                                   
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                                               
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                                                
+       TRTSHOWNXR-NTX,NMRXMED,DEGENDER  TRTSHOWNXR-NTX,NMRXMED,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0001                           0.0001                                             
+       TRTSHOWNXR-NTX,NMRXMED,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                      
+       TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                             
+       TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                             
+       TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                              
+       TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                              
+       TRTSHOWNXR-NTX,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                       
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,FNSMOKE
+prop.  0.0001                              
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0001                                                           
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse  TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0001                                0.0001                                               
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                        
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                    
+       TRTSHOWNXR-NTX,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                             
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,adverse,AMCHRMPR
+prop.  0.0001                                                   
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                      
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0001                                                                               
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                              
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                       
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,DEGENDER
+prop.  0.0001                                                         
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                      
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                      
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                       
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                    
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0001                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                            
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                              
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                                         
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                                                      
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                                              
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                                       
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE  TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,FNSMOKE
+prop.  0.0001                              0.0001                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                              
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0001                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,ASBRTHDT,DEGENDER
+prop.  0.0001                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,AMCHRMPR
+prop.  0.0001                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,VIBMI,adverse,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,ASBRTHDT
+prop.  0.0001                                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,DEGENDER
+prop.  0.0001                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                              
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse
+prop.  0.0001                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,ASBRTHDT
+prop.  0.0001                                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,AMCHRMPR
+prop.  0.0001                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,ASBRTHDT
+prop.  0.0001                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                              
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse
+prop.  0.0001                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse
+prop.  0.0001                                                                              
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,AMCHRMPR,DEGENDER
+prop.  0.0001                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                               
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,DEGENDER,FNSMOKE
+prop.  0.0001                                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,DEGENDER
+prop.  0.0001                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,AMCHRMPR
+prop.  0.0001                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT
+prop.  0.0001                                                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.0001                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,DEGENDER
+prop.  0.0001                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR
+prop.  0.0001                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,ASBRTHDT
+prop.  0.0001                                                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse
+prop.  0.0001                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0001                                                                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,VIBMI,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,I(ADOPI30D > 0)TRUE,FNSMOKE
+prop.  0.0001                                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,adverse,I(ADOPI30D > 0)TRUE,AMCHRMPR
+prop.  0.0001                                                                                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,I(ADOPI30D > 0)TRUE
+prop.  0.0001                                                                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse
+prop.  0.0001                                                                                      
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.0001                                                                                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,VIBMI,adverse,I(ADOPI30D > 0)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.0001                                                                                                                                     
+
+Log pseudo marginal likelihood: LPML=-1772.065
+Deviance Information Criterion: DIC=3543.626
+Watanabe-Akaike information criterion: WAIC=3544.112
+Number of subjects: n=529

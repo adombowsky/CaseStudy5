@@ -1,0 +1,288 @@
+---
+title: "Variable Selection"
+author: "Alex Dombowsky"
+date: "4/7/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(purrr)
+library(invgamma)
+library(bridgesampling)
+library(spBayesSurv)
+library(survival)
+library(xtable)
+```
+
+# Loading Data
+```{r}
+load("opiod.RData")
+main = opiod$main
+asd = opiod$ASD
+asg = opiod$ASG
+asm = opiod$ASM
+asp = opiod$ASP
+asi = opiod$ASI
+dem = opiod$DEM
+dsm = opiod$DSM
+eom = opiod$EOM
+nms = opiod$NMS
+qol = opiod$QOL
+qlp = opiod$QLP
+fnd = opiod$FND
+mhx = opiod$MHX
+vis = opiod$VIS
+
+op_list = list(main, asd, asg, asm, asp, asi, dem, dsm, eom, nms, qol, qlp, fnd, mhx, vis)
+# results in 570 by 119 matrix
+opiod_df <- op_list %>% reduce(full_join, by = "PATID")
+opiod_df <- opiod_df[, !grepl("X.", colnames(opiod_df), fixed = T)]
+# adding adverse events
+ad1 = opiod$AD1
+adv = function(x, names){
+  return(ifelse(x %in% names,1, 0))
+}
+patid <- main$PATID
+opiod_df$adverse = sapply(patid, adv, names = ad1$PATID)
+
+
+```
+
+
+# AFT model
+
+```{r}
+# compute Bayes factor function
+compute_bf_s <- function(L_obs, l_c, delta, R, B, f1, f2, a, b.sq) {
+  
+  # 1: define two models
+  X1 = model.matrix(lm(f1, data = opiod_df))
+  p1 = ncol(X1)
+  beta_01 = rep(0, p1) # default
+  Sigma_01= solve(crossprod(X1, X1)) # default
+  # more complicated model
+  X2 = model.matrix(lm(f2, data = opiod_df))
+  p2 = ncol(X2)
+  beta_02 = rep(0, p2) # default
+  Sigma_02 = solve(crossprod(X2,X2)) # default
+  
+  # 2: compute log-posterior under both models
+  log_posterior_f1<- function(pars, data){
+  L_obs <- data$L_obs
+  l_c <- data$l_c
+  X <- data$X
+  p = ncol(X)
+  n = nrow(X)
+  n_cens = length(l_c)
+  names = c(paste("Beta", 1:p), "phi", "g")
+  beta <- pars[names[1:p]]
+  phi <- pars[names[p+1]]
+  g <- pars[names[p+2]]
+  beta_0 = beta_01
+  Sigma_0 = Sigma_01
+  a = a
+  b = b.sq
+  out <-
+    sum(dlnorm(exp(L_obs), X[(n_cens + 1): n, ] %*% beta, sqrt(1/phi), log = T)) +
+    sum(pnorm(phi * (l_c - X[1:n_cens, ] %*% beta), log.p = T))
+    dmvnorm(beta, beta_0, Sigma_0 * g/phi, log = TRUE) +  # beta prior
+    dgamma(phi, a/2, a * b^2/2, log = TRUE) + # phi prior
+    dinvgamma(g, 1/2, n/2, log = TRUE) # g prior
+  return(out)
+  }
+  
+  log_posterior_f2<- function(pars, data){
+  L_obs <- data$L_obs
+  l_c <- data$l_c
+  X <- data$X
+  p = ncol(X)
+  n = nrow(X)
+  n_cens = length(l_c)
+  names = c(paste("Beta", 1:p), "phi", "g")
+  beta <- pars[names[1:p]]
+  phi <- pars[names[p+1]]
+  g <- pars[names[p+2]]
+  beta_0 = beta_02
+  Sigma_0 = Sigma_02
+  a = a
+  b = b.sq
+  out <-
+    sum(dlnorm(exp(L_obs), X[(n_cens + 1): n, ] %*% beta, sqrt(1/phi), log = T)) +
+    sum(pnorm(phi * (l_c - X[1:n_cens, ] %*% beta), log.p = T))
+    dmvnorm(beta, beta_0, Sigma_0 * g/phi, log = TRUE) +  # beta prior
+    dgamma(phi, a/2, a * b^2/2, log = TRUE) + # phi prior
+    dinvgamma(g, 1/2, n/2, log = TRUE) # g prior
+  return(out)
+  }
+  
+  # getting samples
+  samp1 <- relapse_gibbs(R, B, L_obs, delta, l_c, p1, X1, beta_01, Sigma_01, a, b.sq)
+  samp_mcmc1 = cbind(samp1$beta, samp1$phi, samp1$g)
+  samp2 <- relapse_gibbs(R, B, L_obs, delta, l_c, p2, X2, beta_02, Sigma_02, a, b.sq)
+  samp_mcmc2 = cbind(samp2$beta, samp2$phi, samp2$g)
+
+  # names and lower bounds
+  names1 = c(paste("Beta", 1:p1), "phi", "g")
+  lb1 = c(rep(-Inf, p1), 10^-20, 10^-20)
+  ub1 = c(rep(Inf, p1), Inf, Inf)
+  names(lb1) = names(ub1) = colnames(samp_mcmc1) = names1
+
+  names2 = c(paste("Beta", 1:p2), "phi", "g")
+  lb2 = c(rep(-Inf, p2), 10^-20, 10^-20)
+  ub2 = c(rep(Inf, p2), Inf, Inf)
+  names(lb2) = names(ub2) = colnames(samp_mcmc2) = names2
+
+  # computing Bayes factor
+  bridge1 = bridge_sampler(samples = samp_mcmc1,
+                        log_posterior = log_posterior_f1,
+                        data = list(L_obs = L_obs, l_c = l_c, X = X1),
+                        lb = lb1,
+                        ub = ub1, silent=TRUE)
+
+  bridge2 = bridge_sampler(samples = samp_mcmc2,
+                        log_posterior = log_posterior_f2,
+                        data = list(L_obs = L_obs, l_c = l_c, X = X2),
+                        lb = lb2,
+                        ub = ub2, silent = TRUE)
+
+  result = bayes_factor(bridge2, bridge1, log = TRUE)
+  pr = post_prob(bridge1, bridge2)
+  pr = as.vector(pr)
+  names(pr) = c()
+  result = c(result$bf,  pr[1], pr[2])
+  return(result)
+}
+
+
+```
+
+```{r}
+# testing variable selection
+opiod_df <- with(opiod_df, opiod_df[order(event),])
+opiod_df <- opiod_df[!is.na(opiod_df$event), ]
+R = 10000
+B = 2000
+L_obs = log(opiod_df$time[opiod_df$event == 1])
+l_c = log(opiod_df$time[opiod_df$event==0])
+delta = opiod_df$event
+a = 2
+b.sq = 1
+
+f1 = formula(lm(time ~ TRTSHOWN, data = opiod_df))
+f2 = formula(lm(time ~ TRTSHOWN + VIWTLBS, data = opiod_df))
+
+
+compute_bf_s(L_obs, l_c, delta, R, B, f1, f2, a, b.sq)
+```
+Cox Proportional Hazards Model:
+
+```{r}
+# fitting a model
+mcmc=list(nburn=2000, nsave=10000, nskip=0, ndisplay=1000)
+prior = list()
+f = Surv(time, event) ~ TRTSHOWN + I(MHOPIWDL > 5) + NMRXMED + factor(QLANXDEP) + VIBMI + adverse + 
+  I(ADOPI30D > 0) + ASBRTHDT + AMCHRMPR + DEGENDER + FNSMOKE
+
+# variable selection
+vsel <- survregbayes(formula = f,
+                     data = opiod_df,
+                     mcmc = mcmc,
+                     survmodel = "PH",
+                     selection = T)
+sink(file='myoutput.txt')
+summary(vsel)
+sink()
+
+# model with highest probability: TRTSHOWN,I(MHOPIWDL > 5),adverse,I(ADOPI30D > 0)
+# getting rid of VIBMI after its CI crosses 0
+
+# interactions
+
+f = Surv(time, event) ~ (TRTSHOWN + I(MHOPIWDL > 5) + adverse  + I(ADOPI30D > 0))^2
+
+vsel_is <- survregbayes(formula = f,
+                     data = opiod_df,
+                     mcmc = mcmc,
+                     survmodel = "PH",
+                     selection = T)
+
+sink(file='myoutput_interactions.txt')
+summary(vsel_is)
+sink()
+
+# best model: TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,I(MHOPIWDL > 5)TRUE:adverse 
+
+f = Surv(time, event) ~ TRTSHOWN + I(MHOPIWDL > 5) + I(ADOPI30D > 0) + adverse + I(MHOPIWDL > 5):adverse
+
+cph_fit <- indeptCoxph(f,
+                       data = opiod_df, 
+                       mcmc = mcmc)
+
+sink(file='cph_output.txt')
+summary(cph_fit)
+sink()
+
+# fitting the same model to the AFT and comparing DIC/WAIC
+aft <- survregbayes(formula = f,
+                     data = opiod_df,
+                     survmodel = "AFT",
+                      mcmc = mcmc,
+                     selection = T)
+summary(aft)
+cph <- survregbayes(f,
+                       data = opiod_df,
+                       survmodel = "PH",
+                       mcmc = mcmc)
+summary(cph)
+
+DIC <- c(3730.114, 3733.145)
+WAIC <- c(3730.513, 3732.439)
+model <- c("CPH", "AFT")
+df <- data.frame(model = model, WAIC = WAIC, DIC = DIC)
+print(xtable(df))
+
+summ = summary(cph)
+df = summ$coeff
+df = df[, -3]
+print(xtable(df))
+
+```
+
+# Induction Logistic/Probit Regression
+```{r}
+f = inducted ~ TRTSHOWN + I(MHOPIWDL > 5) + NMRXMED + factor(QLANXDEP) + VIBMI  + 
+  I(ADOPI30D > 0) + ASBRTHDT + AMCHRMPR + DEGENDER + FNSMOKE + AMHOSPTM + DSOPICRA + NMRDTX + NMWORKIN + QLHMLESS
+
+options(mc.cores = 2)
+ind_fit <- stan_glm(f, 
+                    prior = cauchy(0, 2.5),
+                    prior_intercept = cauchy(0,10),
+                    iter = 10000,
+                    chains = 2,
+                    family = "binomial",
+                    data = ind_failure)
+bf <- bayesfactor_parameters(ind_fit, null = 0)
+bf
+
+# BF shows that TRTSHOWN and I(ADOPI30D > 0) are important
+options(mc.cores = 2)
+fit_inducted <- stan_glm(inducted ~ (TRTSHOWN + I(ADOPI30D > 0))^2, 
+                    prior = cauchy(0, 2.5),
+                    prior_intercept = cauchy(0,10),
+                    iter = 10000,
+                    chains = 2,
+                    family = "binomial",
+                    data = ind_failure)
+cis = posterior_interval(fit_inducted, prob = .95)
+fit = as.matrix(fit_inducted)
+medias = apply(fit, 2, quantile, prob = 0.5)
+means = colMeans(fit)
+df = data.frame(means = means, medians = medias, cis)
+colnames(df) = c("Mean", "Median", "2.5%", "97.5%")
+print(xtable(df))
+
+
+```
+

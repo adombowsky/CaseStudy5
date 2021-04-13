@@ -1,0 +1,66 @@
+---
+title: "Questions"
+author: "Alex Dombowsky"
+date: "4/9/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Question 1:
+
+Variable selection on the coefficient involving treatment (including interactions):
+
+AFT:
+
+```{r}
+
+```
+
+
+CPH:
+
+```{r}
+
+```
+
+Results are stored in "cph_output.txt". I found that at a fixed time $t$, the hazard will be larger for those in the XR-NTX treatment group. The hazard will decrease for those who have admitted to taking opiods in the last 30 days prior to starting the treatment. The hazard will increase for those who find opiod withdrawal to be moderately-severely uncomfortable. The coefficients associated with adverse events are not significant based on the informal CI test. 
+
+
+(a) Variable selection on all other coefficients in the model:
+
+AFT:
+
+```{r}
+
+```
+
+
+CPH:
+
+```{r}
+
+```
+
+Comment about interactions with treatment:
+
+
+(b) Goodness of fit for both models:
+
+AFT:
+
+```{r}
+
+```
+
+
+CPH:
+```{r}
+
+```
+
+# Question 2
+
+Modeled using a Bayesian logistic regression.

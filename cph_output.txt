@@ -1,0 +1,15 @@
+Cox PH model with piecewise constant baseline hazards
+Call:
+indeptCoxph(formula = f, data = opiod_df, mcmc = mcmc)
+
+Posterior inference of regression coefficients
+(Adaptive M-H acceptance rate: 0.1844):
+                             Mean      Median    Std. Dev.  95%CI-Low  95%CI-Upp
+TRTSHOWNXR-NTX                0.29078   0.29176   0.11137    0.07188    0.49989 
+I(MHOPIWDL > 5)TRUE           0.45306   0.45645   0.15950    0.14668    0.77099 
+I(ADOPI30D > 0)TRUE          -0.35736  -0.35613   0.11075   -0.57774   -0.13346 
+adverse                      -0.02128  -0.01953   0.20802   -0.42891    0.37762 
+I(MHOPIWDL > 5)TRUE:adverse  -0.37499  -0.38092   0.24860   -0.85929    0.11645 
+
+Log pseudo marginal likelihood: LPML=-1988.487
+Number of subjects: n=553
