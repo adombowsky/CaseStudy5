@@ -1,0 +1,455 @@
+Proportional hazards model:
+Call:
+survregbayes(formula = f, data = pp, survmodel = "PH", mcmc = mcmc, 
+    selection = T)
+
+Posterior inference of regression coefficients
+(Adaptive M-H acceptance rate: 0.107):
+                     Mean       Median     Std. Dev.  95%CI-Low  95%CI-Upp
+TRTSHOWNXR-NTX       -0.058357  -0.093088   1.146811  -2.264038   2.324008
+I(MHOPIWDL > 5)TRUE   0.211845   0.155806   1.104988  -1.896770   2.309390
+NMRXMED               0.020263   0.021817   1.276867  -2.442242   2.620287
+factor(QLANXDEP)2    -0.176976  -0.162449   1.100286  -2.199763   2.054227
+factor(QLANXDEP)3    -0.086194  -0.244255   1.219702  -2.611946   2.663728
+ASBRTHDT             -0.002247  -0.012740   0.040137  -0.072625   0.105298
+AMCHRMPR              0.147106   0.109242   1.087238  -1.967258   2.406369
+DEGENDER              0.237177   0.138656   1.056137  -1.872156   2.574375
+FNSMOKE               0.246977   0.075488   1.407862  -2.482201   3.003912
+NMRDTX                0.015819  -0.031096   1.204130  -2.690439   2.390186
+
+Variable selection:
+       ASBRTHDT  None      factor(QLANXDEP)3,ASBRTHDT  I(MHOPIWDL > 5)TRUE,ASBRTHDT  factor(QLANXDEP)3
+prop.  0.156125  0.111000  0.044125                    0.033375                      0.031000         
+       TRTSHOWNXR-NTX,ASBRTHDT  I(MHOPIWDL > 5)TRUE  ASBRTHDT,FNSMOKE  ASBRTHDT,AMCHRMPR
+prop.  0.024875                 0.024500             0.022500          0.020750         
+       ASBRTHDT,DEGENDER  NMRXMED,ASBRTHDT  ASBRTHDT,NMRDTX  DEGENDER  factor(QLANXDEP)2,ASBRTHDT
+prop.  0.020500           0.017500          0.017250         0.017000  0.015500                  
+       FNSMOKE   TRTSHOWNXR-NTX  TRTSHOWNXR-NTX,factor(QLANXDEP)3,ASBRTHDT  AMCHRMPR  NMRXMED 
+prop.  0.015000  0.014750        0.013000                                   0.011500  0.011500
+       factor(QLANXDEP)2  NMRDTX    I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT
+prop.  0.010625           0.010375  0.010125                                      
+       NMRXMED,factor(QLANXDEP)3,ASBRTHDT  factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.009375                            0.009000                          
+       factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT  factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR
+prop.  0.007875                                      0.007625                           
+       factor(QLANXDEP)3,ASBRTHDT,NMRDTX  TRTSHOWNXR-NTX,factor(QLANXDEP)3
+prop.  0.007250                           0.007125                        
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3  factor(QLANXDEP)3,DEGENDER
+prop.  0.006375                               0.006125                  
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT  I(MHOPIWDL > 5)TRUE,DEGENDER
+prop.  0.005500                              0.005125                    
+       factor(QLANXDEP)3,ASBRTHDT,DEGENDER  I(MHOPIWDL > 5)TRUE,ASBRTHDT,DEGENDER
+prop.  0.005000                             0.004875                             
+       factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR  NMRXMED,factor(QLANXDEP)3
+prop.  0.004750                             0.004375                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,ASBRTHDT,NMRDTX  I(MHOPIWDL > 5)TRUE,ASBRTHDT,FNSMOKE
+prop.  0.004375                                          0.004250                            
+       TRTSHOWNXR-NTX,ASBRTHDT,FNSMOKE  factor(QLANXDEP)3,FNSMOKE
+prop.  0.004250                         0.004000                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE  factor(QLANXDEP)3,AMCHRMPR
+prop.  0.004000                                           0.003875                  
+       factor(QLANXDEP)2,factor(QLANXDEP)3  factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.003875                             0.003750                                            
+       NMRXMED,ASBRTHDT,FNSMOKE  TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,ASBRTHDT
+prop.  0.003625                  0.003500                                   
+       I(MHOPIWDL > 5)TRUE,ASBRTHDT,AMCHRMPR  TRTSHOWNXR-NTX,ASBRTHDT,NMRDTX  NMRXMED,ASBRTHDT,DEGENDER
+prop.  0.003375                               0.003250                        0.003125                 
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT  I(MHOPIWDL > 5)TRUE,AMCHRMPR
+prop.  0.003125                                                0.003000                    
+       I(MHOPIWDL > 5)TRUE,ASBRTHDT,NMRDTX  DEGENDER,FNSMOKE  factor(QLANXDEP)2,AMCHRMPR
+prop.  0.003000                             0.002875          0.002875                  
+       NMRXMED,ASBRTHDT,AMCHRMPR  TRTSHOWNXR-NTX,NMRXMED,ASBRTHDT  TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE
+prop.  0.002875                   0.002875                         0.002875                          
+       ASBRTHDT,AMCHRMPR,FNSMOKE  TRTSHOWNXR-NTX,ASBRTHDT,AMCHRMPR
+prop.  0.002750                   0.002750                        
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT  ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.002750                                                       0.002500                
+       NMRXMED,factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR  factor(QLANXDEP)2,FNSMOKE  NMRXMED,DEGENDER
+prop.  0.002500                                     0.002375                   0.002375        
+       TRTSHOWNXR-NTX,ASBRTHDT,DEGENDER  ASBRTHDT,AMCHRMPR,DEGENDER  NMRXMED,factor(QLANXDEP)2,ASBRTHDT
+prop.  0.002375                          0.002250                    0.002250                          
+       NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT  I(MHOPIWDL > 5)TRUE,FNSMOKE
+prop.  0.002250                                              0.002125                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,DEGENDER  AMCHRMPR,FNSMOKE
+prop.  0.002125                                                                0.002000        
+       ASBRTHDT,DEGENDER,FNSMOKE  factor(QLANXDEP)2,ASBRTHDT,FNSMOKE  NMRXMED,ASBRTHDT,NMRDTX
+prop.  0.002000                   0.002000                            0.002000               
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,DEGENDER  TRTSHOWNXR-NTX,FNSMOKE  TRTSHOWNXR-NTX,NMRXMED
+prop.  0.002000                                       0.002000                0.002000              
+       ASBRTHDT,AMCHRMPR,NMRDTX  factor(QLANXDEP)3,NMRDTX
+prop.  0.001875                  0.001875                
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,ASBRTHDT,DEGENDER  factor(QLANXDEP)3,ASBRTHDT,FNSMOKE,NMRDTX
+prop.  0.001875                                            0.001750                                 
+       NMRXMED,FNSMOKE  NMRXMED,AMCHRMPR  I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR
+prop.  0.001750         0.001750          0.001750                                               
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,ASBRTHDT  factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.001750                                           0.001625                                   
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR  TRTSHOWNXR-NTX,DEGENDER
+prop.  0.001625                                                         0.001625               
+       factor(QLANXDEP)3,DEGENDER,FNSMOKE  factor(QLANXDEP)3,AMCHRMPR,FNSMOKE
+prop.  0.001500                            0.001500                          
+       factor(QLANXDEP)2,DEGENDER  NMRXMED,factor(QLANXDEP)3,ASBRTHDT,NMRDTX
+prop.  0.001500                    0.001500                                 
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,DEGENDER
+prop.  0.001500                                               
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER  DEGENDER,NMRDTX
+prop.  0.001500                                                                  0.001375       
+       ASBRTHDT,FNSMOKE,NMRDTX  factor(QLANXDEP)2,ASBRTHDT,DEGENDER
+prop.  0.001375                 0.001375                           
+       factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.001375                                                     
+       NMRXMED,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR  NMRXMED,factor(QLANXDEP)2
+prop.  0.001375                                     0.001375                 
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,AMCHRMPR  I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,ASBRTHDT
+prop.  0.001375                                        0.001375                                      
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT  factor(QLANXDEP)2,ASBRTHDT,NMRDTX
+prop.  0.001375                                                     0.001250                         
+       NMRXMED,factor(QLANXDEP)3,DEGENDER  I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,NMRDTX
+prop.  0.001250                            0.001250                                             
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2  TRTSHOWNXR-NTX,AMCHRMPR
+prop.  0.001250                               0.001250               
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,DEGENDER  TRTSHOWNXR-NTX,factor(QLANXDEP)2,ASBRTHDT
+prop.  0.001250                                   0.001250                                 
+       TRTSHOWNXR-NTX,NMRXMED,ASBRTHDT,DEGENDER
+prop.  0.001250                                
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,DEGENDER  AMCHRMPR,DEGENDER
+prop.  0.001250                                                    0.001125         
+       factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,NMRDTX
+prop.  0.001125                                           
+       factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.001125                                                     
+       factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR
+prop.  0.001125                                             
+       NMRXMED,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE  I(MHOPIWDL > 5)TRUE,NMRXMED
+prop.  0.001125                                    0.001125                   
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3  FNSMOKE,NMRDTX
+prop.  0.001125                                  0.001000      
+       factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER  factor(QLANXDEP)2,factor(QLANXDEP)3,AMCHRMPR
+prop.  0.001000                                      0.001000                                    
+       NMRXMED,ASBRTHDT,AMCHRMPR,FNSMOKE  I(MHOPIWDL > 5)TRUE,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.001000                           0.001000                                    
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,NMRDTX
+prop.  0.001000                                   
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,DEGENDER
+prop.  0.001000                                                       
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR
+prop.  0.001000                                          
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.001000                                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,DEGENDER  AMCHRMPR,NMRDTX
+prop.  0.001000                                                                        0.000875       
+       factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.000875                                                              
+       NMRXMED,factor(QLANXDEP)3,AMCHRMPR  NMRXMED,factor(QLANXDEP)3,ASBRTHDT,DEGENDER
+prop.  0.000875                            0.000875                                   
+       I(MHOPIWDL > 5)TRUE,NMRDTX  I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT
+prop.  0.000875                    0.000875                                                        
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,AMCHRMPR
+prop.  0.000875                                     
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT  TRTSHOWNXR-NTX,NMRDTX
+prop.  0.000875                                                                  0.000875             
+       TRTSHOWNXR-NTX,DEGENDER,FNSMOKE  TRTSHOWNXR-NTX,factor(QLANXDEP)2,ASBRTHDT,FNSMOKE
+prop.  0.000875                         0.000875                                         
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3
+prop.  0.000875                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT
+prop.  0.000875                                                             
+       factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,FNSMOKE,NMRDTX  factor(QLANXDEP)2,NMRDTX
+prop.  0.000750                                            0.000750                
+       factor(QLANXDEP)2,AMCHRMPR,FNSMOKE  factor(QLANXDEP)2,factor(QLANXDEP)3,FNSMOKE
+prop.  0.000750                            0.000750                                   
+       I(MHOPIWDL > 5)TRUE,ASBRTHDT,AMCHRMPR,DEGENDER  I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,DEGENDER
+prop.  0.000750                                        0.000750                                      
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.000750                                              
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000750                                                        
+       TRTSHOWNXR-NTX,ASBRTHDT,DEGENDER,FNSMOKE  TRTSHOWNXR-NTX,factor(QLANXDEP)3,FNSMOKE
+prop.  0.000750                                  0.000750                                
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.000750                                                 
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR
+prop.  0.000750                                                              
+       factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000625                                                      
+       NMRXMED,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000625                                            
+       NMRXMED,factor(QLANXDEP)2,ASBRTHDT,DEGENDER  NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3
+prop.  0.000625                                     0.000625                                   
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3  TRTSHOWNXR-NTX,NMRXMED,DEGENDER
+prop.  0.000625                                       0.000625                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,ASBRTHDT,AMCHRMPR  ASBRTHDT,AMCHRMPR,FNSMOKE,NMRDTX
+prop.  0.000625                                              0.000500                        
+       ASBRTHDT,AMCHRMPR,DEGENDER,FNSMOKE  factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,NMRDTX
+prop.  0.000500                            0.000500                                  
+       factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.000500                                            
+       factor(QLANXDEP)2,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.000500                                   
+       factor(QLANXDEP)2,factor(QLANXDEP)3,AMCHRMPR,FNSMOKE  NMRXMED,NMRDTX  NMRXMED,DEGENDER,NMRDTX
+prop.  0.000500                                              0.000500        0.000500               
+       NMRXMED,ASBRTHDT,DEGENDER,NMRDTX  NMRXMED,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000500                          0.000500                          
+       NMRXMED,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000500                                          
+       NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.000500                                                    
+       I(MHOPIWDL > 5)TRUE,ASBRTHDT,DEGENDER,FNSMOKE  I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,NMRDTX
+prop.  0.000500                                       0.000500                                    
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,FNSMOKE  I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,FNSMOKE
+prop.  0.000500                                       0.000500                                     
+       I(MHOPIWDL > 5)TRUE,NMRXMED,DEGENDER
+prop.  0.000500                            
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE  TRTSHOWNXR-NTX,DEGENDER,NMRDTX
+prop.  0.000500                                                        0.000500                      
+       TRTSHOWNXR-NTX,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000500                                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE,NMRDTX  TRTSHOWNXR-NTX,factor(QLANXDEP)2
+prop.  0.000500                                                  0.000500                        
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.000500                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT
+prop.  0.000500                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,DEGENDER  AMCHRMPR,DEGENDER,NMRDTX
+prop.  0.000500                                                      0.000375                
+       AMCHRMPR,DEGENDER,FNSMOKE  factor(QLANXDEP)3,FNSMOKE,NMRDTX
+prop.  0.000375                   0.000375                        
+       factor(QLANXDEP)3,ASBRTHDT,DEGENDER,FNSMOKE  factor(QLANXDEP)2,AMCHRMPR,NMRDTX
+prop.  0.000375                                     0.000375                         
+       factor(QLANXDEP)2,factor(QLANXDEP)3,DEGENDER
+prop.  0.000375                                    
+       factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,DEGENDER  NMRXMED,AMCHRMPR,FNSMOKE
+prop.  0.000375                                               0.000375                
+       NMRXMED,factor(QLANXDEP)3,FNSMOKE  NMRXMED,factor(QLANXDEP)2,AMCHRMPR
+prop.  0.000375                           0.000375                          
+       I(MHOPIWDL > 5)TRUE,ASBRTHDT,AMCHRMPR,NMRDTX  I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,NMRDTX
+prop.  0.000375                                      0.000375                                    
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,AMCHRMPR
+prop.  0.000375                                      
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.000375                                                                
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,FNSMOKE
+prop.  0.000375                                    
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000375                                            
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,ASBRTHDT  TRTSHOWNXR-NTX,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000375                                                0.000375                               
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,NMRDTX  TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3
+prop.  0.000375                                 0.000375                                          
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,FNSMOKE
+prop.  0.000375                                                  
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,DEGENDER
+prop.  0.000375                                                            
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000375                                                                     
+       TRTSHOWNXR-NTX,NMRXMED,ASBRTHDT,FNSMOKE  TRTSHOWNXR-NTX,NMRXMED,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000375                                 0.000375                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,FNSMOKE  TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,AMCHRMPR
+prop.  0.000375                                    0.000375                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,NMRDTX
+prop.  0.000375                                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000375                                                                             
+       factor(QLANXDEP)3,AMCHRMPR,DEGENDER  factor(QLANXDEP)3,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000250                             0.000250                                  
+       factor(QLANXDEP)2,FNSMOKE,NMRDTX  factor(QLANXDEP)2,DEGENDER,FNSMOKE
+prop.  0.000250                          0.000250                          
+       factor(QLANXDEP)2,factor(QLANXDEP)3,NMRDTX  factor(QLANXDEP)2,factor(QLANXDEP)3,DEGENDER,FNSMOKE
+prop.  0.000250                                    0.000250                                            
+       NMRXMED,AMCHRMPR,DEGENDER  NMRXMED,ASBRTHDT,FNSMOKE,NMRDTX  NMRXMED,ASBRTHDT,AMCHRMPR,NMRDTX
+prop.  0.000250                   0.000250                         0.000250                        
+       NMRXMED,factor(QLANXDEP)3,AMCHRMPR,DEGENDER  NMRXMED,factor(QLANXDEP)2,DEGENDER
+prop.  0.000250                                     0.000250                          
+       NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR
+prop.  0.000250                                                     
+       I(MHOPIWDL > 5)TRUE,DEGENDER,NMRDTX  I(MHOPIWDL > 5)TRUE,DEGENDER,FNSMOKE
+prop.  0.000250                             0.000250                            
+       I(MHOPIWDL > 5)TRUE,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.000250                                     
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000250                                                      
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.000250                                                       
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,ASBRTHDT,DEGENDER
+prop.  0.000250                                               
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3
+prop.  0.000250                                               
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000250                                                                          
+       I(MHOPIWDL > 5)TRUE,NMRXMED,FNSMOKE  I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,DEGENDER
+prop.  0.000250                             0.000250                                              
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,NMRDTX
+prop.  0.000250                                                     
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000250                                                              
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2
+prop.  0.000250                                     
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.000250                                                                        
+       TRTSHOWNXR-NTX,AMCHRMPR,FNSMOKE  TRTSHOWNXR-NTX,ASBRTHDT,AMCHRMPR,NMRDTX
+prop.  0.000250                         0.000250                               
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000250                                                 
+       TRTSHOWNXR-NTX,NMRXMED,ASBRTHDT,AMCHRMPR  TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,DEGENDER
+prop.  0.000250                                  0.000250                                         
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,NMRDTX
+prop.  0.000250                                                
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR
+prop.  0.000250                                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,DEGENDER  TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,ASBRTHDT,NMRDTX
+prop.  0.000250                                     0.000250                                          
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000250                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2
+prop.  0.000250                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,NMRDTX
+prop.  0.000250                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR
+prop.  0.000250                                                                      
+       AMCHRMPR,FNSMOKE,NMRDTX  ASBRTHDT,DEGENDER,FNSMOKE,NMRDTX
+prop.  0.000125                 0.000125                        
+       factor(QLANXDEP)3,AMCHRMPR,DEGENDER,FNSMOKE  factor(QLANXDEP)2,AMCHRMPR,DEGENDER
+prop.  0.000125                                     0.000125                           
+       factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR,FNSMOKE  factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000125                                     0.000125                                    
+       factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.000125                                            
+       factor(QLANXDEP)2,factor(QLANXDEP)3,AMCHRMPR,DEGENDER,FNSMOKE  NMRXMED,AMCHRMPR,NMRDTX
+prop.  0.000125                                                       0.000125               
+       NMRXMED,ASBRTHDT,DEGENDER,FNSMOKE,NMRDTX  NMRXMED,ASBRTHDT,AMCHRMPR,FNSMOKE,NMRDTX
+prop.  0.000125                                  0.000125                                
+       NMRXMED,ASBRTHDT,AMCHRMPR,DEGENDER,NMRDTX  NMRXMED,factor(QLANXDEP)3,DEGENDER,FNSMOKE
+prop.  0.000125                                   0.000125                                  
+       NMRXMED,factor(QLANXDEP)3,AMCHRMPR,FNSMOKE  NMRXMED,factor(QLANXDEP)3,AMCHRMPR,DEGENDER,FNSMOKE
+prop.  0.000125                                    0.000125                                           
+       NMRXMED,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.000125                                           
+       NMRXMED,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,FNSMOKE,NMRDTX
+prop.  0.000125                                                  
+       NMRXMED,factor(QLANXDEP)2,DEGENDER,FNSMOKE  NMRXMED,factor(QLANXDEP)2,AMCHRMPR,DEGENDER
+prop.  0.000125                                    0.000125                                   
+       NMRXMED,factor(QLANXDEP)2,ASBRTHDT,FNSMOKE  NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,FNSMOKE
+prop.  0.000125                                    0.000125                                           
+       NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,AMCHRMPR,DEGENDER
+prop.  0.000125                                                     
+       NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,NMRDTX
+prop.  0.000125                                                   
+       NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,DEGENDER
+prop.  0.000125                                                     
+       I(MHOPIWDL > 5)TRUE,FNSMOKE,NMRDTX  I(MHOPIWDL > 5)TRUE,AMCHRMPR,DEGENDER
+prop.  0.000125                            0.000125                             
+       I(MHOPIWDL > 5)TRUE,ASBRTHDT,FNSMOKE,NMRDTX
+prop.  0.000125                                   
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,DEGENDER,FNSMOKE
+prop.  0.000125                                              
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,AMCHRMPR,NMRDTX
+prop.  0.000125                                             
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,AMCHRMPR,DEGENDER
+prop.  0.000125                                               
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,NMRDTX
+prop.  0.000125                                                      
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,DEGENDER
+prop.  0.000125                                      
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,AMCHRMPR,FNSMOKE
+prop.  0.000125                                              
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,ASBRTHDT,FNSMOKE,NMRDTX
+prop.  0.000125                                                     
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR
+prop.  0.000125                                               
+       I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,DEGENDER
+prop.  0.000125                                                                 
+       I(MHOPIWDL > 5)TRUE,NMRXMED,DEGENDER,FNSMOKE  I(MHOPIWDL > 5)TRUE,NMRXMED,AMCHRMPR
+prop.  0.000125                                      0.000125                            
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,FNSMOKE,NMRDTX
+prop.  0.000125                                           
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.000125                                             
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,AMCHRMPR,NMRDTX
+prop.  0.000125                                            
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,AMCHRMPR,FNSMOKE
+prop.  0.000125                                             
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000125                                              
+       I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,AMCHRMPR,DEGENDER,NMRDTX
+prop.  0.000125                                                     
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,NMRDTX
+prop.  0.000125                                            
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,AMCHRMPR
+prop.  0.000125                                              
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR
+prop.  0.000125                                                       
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000125                                                                
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,DEGENDER
+prop.  0.000125                                                                
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,AMCHRMPR,DEGENDER
+prop.  0.000125                                                                         
+       I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,DEGENDER
+prop.  0.000125                                                                         
+       TRTSHOWNXR-NTX,AMCHRMPR,DEGENDER  TRTSHOWNXR-NTX,ASBRTHDT,FNSMOKE,NMRDTX
+prop.  0.000125                          0.000125                              
+       TRTSHOWNXR-NTX,ASBRTHDT,AMCHRMPR,DEGENDER,FNSMOKE  TRTSHOWNXR-NTX,factor(QLANXDEP)3,AMCHRMPR
+prop.  0.000125                                           0.000125                                 
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,ASBRTHDT,DEGENDER,FNSMOKE
+prop.  0.000125                                                  
+       TRTSHOWNXR-NTX,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000125                                                   
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,NMRDTX  TRTSHOWNXR-NTX,factor(QLANXDEP)2,FNSMOKE
+prop.  0.000125                                 0.000125                                
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,ASBRTHDT,NMRDTX
+prop.  0.000125                                        
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000125                                                   
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,DEGENDER
+prop.  0.000125                                                   
+       TRTSHOWNXR-NTX,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR
+prop.  0.000125                                                            
+       TRTSHOWNXR-NTX,NMRXMED,NMRDTX  TRTSHOWNXR-NTX,NMRXMED,FNSMOKE
+prop.  0.000125                       0.000125                      
+       TRTSHOWNXR-NTX,NMRXMED,DEGENDER,NMRDTX  TRTSHOWNXR-NTX,NMRXMED,AMCHRMPR
+prop.  0.000125                                0.000125                       
+       TRTSHOWNXR-NTX,NMRXMED,ASBRTHDT,NMRDTX  TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,FNSMOKE
+prop.  0.000125                                0.000125                                        
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,ASBRTHDT
+prop.  0.000125                                         
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,ASBRTHDT,FNSMOKE
+prop.  0.000125                                                 
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3
+prop.  0.000125                                                  
+       TRTSHOWNXR-NTX,NMRXMED,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.000125                                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,AMCHRMPR,FNSMOKE
+prop.  0.000125                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,ASBRTHDT,DEGENDER
+prop.  0.000125                                            
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000125                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,NMRDTX
+prop.  0.000125                                                   
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,FNSMOKE
+prop.  0.000125                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)3,AMCHRMPR
+prop.  0.000125                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,DEGENDER
+prop.  0.000125                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000125                                                                       
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,factor(QLANXDEP)2,factor(QLANXDEP)3,ASBRTHDT,DEGENDER
+prop.  0.000125                                                                                
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED
+prop.  0.000125                                  
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,ASBRTHDT,DEGENDER,NMRDTX
+prop.  0.000125                                                           
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,DEGENDER
+prop.  0.000125                                                             
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,DEGENDER,NMRDTX
+prop.  0.000125                                                                    
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,FNSMOKE
+prop.  0.000125                                                                     
+       TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,NMRXMED,factor(QLANXDEP)3,ASBRTHDT,AMCHRMPR,DEGENDER
+prop.  0.000125                                                                               
+
+Log pseudo marginal likelihood: LPML=-1506.3
+Deviance Information Criterion: DIC=3011.489
+Watanabe-Akaike information criterion: WAIC=3012.598
+Number of subjects: n=471

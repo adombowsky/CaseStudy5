@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(purrr)
 library(dplyr)
+library(ggplot2)
 ```
 
 # Cleaning data
@@ -31,17 +32,109 @@ load("opiod.RData")
 
 # Making into 1 data frame (might be useful)
 ```{r}
-opiod_df <- opiod %>% reduce(full_join, by = "PATID")
+main = opiod$main
+asd = opiod$ASD
+asg = opiod$ASG
+asm = opiod$ASM
+asp = opiod$ASP
+asi = opiod$ASI
+dem = opiod$DEM
+dsm = opiod$DSM
+eom = opiod$EOM
+qlp = opiod$QLP
+nms = opiod$NMS
+qol = opiod$QOL
+fnd = opiod$FND
+mhx = opiod$MHX
+vis = opiod$VIS
+
+op_list = list(main, asd, asg, asm, asp, asi, dem, dsm, eom, nms, qol, qlp, fnd, mhx, vis)
+# results in 570 by 119 matrix
+opiod_df <- op_list %>% reduce(full_join, by = "PATID")
+opiod_df <- opiod_df[, !grepl("X.", colnames(opiod_df), fixed = T)]
+# adding adverse events
+ad1 = opiod$AD1
+adv = function(x, names){
+  return(ifelse(x %in% names,1, 0))
+}
+patid <- main$PATID
+opiod_df$adverse = sapply(patid, adv, names = ad1$PATID)
 ```
 
 # Notes on Design
 ## Initial Design
-* CTN-0051 is an $N = 600$, multi-site, two arm, 6 month, parallel group, open label, randomized controlled trial to examine the comparitive effectiveness of XR-NTX vs. BUP-NX
+* CTN-0051 is an $N = 600$, multi-site, two arm, 6 month, parallel group, open label, randomized controlled trial to examine the comparative effectiveness of XR-NTX vs. BUP-NX
 * XR-NTX is administered by injection on an approximately every-four-week basis
 * BUP-NX is provided for take-home daily sublingual dosing
 * Recruitment completed in May, 2016, with N=772 participants consented, N=570 randomized (N=352 of them late randomizers). As of July 25, 2016, N=436 have completed the study
+* 24 weeks
+* primary outcome is time to opiod relapse
+* The primary outcome measure is the time to the event of opioid relapse, defined as >7 consecutive days of non-study opioid use or >1 day of use during each of 4 consecutive weeks, based on weekly urine samples and self-report as measured by the Timeline Follow-Back (TLFB), beginning 21 days or later post-randomization
+* Relapse, or loss of persistent abstinence from non-study opioids, occurs when the participant has used non-protocol prescribed opioids starting at day 21 post randomization as follows: 1) four consecutive opioid use weeks, or 2) seven consecutive days of use by self-report.
+* The primary aim of the study is to estimate the difference, if one exists, between XR-NTX and BUP-NX in the distribution of the time to relapse
+* Our primary hypothesis is that the two treatments are similarly effective at maintaining participants relapse-free.
+* BUP-NX induction is relatively simple, requiring only that a patient progress to a mild state of opioid withdrawal before initiating BUP-NX, and is typically accomplished on an outpatient basis.
+* XR-NTX induction of an opioid-dependent patient requires a complete detoxification and opioid washout period, which is much more difficult for outpatients to accomplish.
+* Most participants were white men, aged 25–45 years, had a primary heroin use disorder, were using by injection, were stratified as low-severity opioid use, and were single, unemployed, and Medicaid-insured
+* The choice of primary outcome for this trial was complicated by the fact that the presumed failure modes differ between XR-NTX and BUP-NX. Patients typically do not use opioids while naltrexone is in the system, due to the blockade of opioid effects. Thus, treatment failure on XR-NTX takes the form of a binary relapse event--the patient skips the next scheduled dose (4 weeks past the last dose), then relapses to regular opioid use at the point that the blockade wears off, often by 5 or at most 6 weeks after the last dose.
+* safety, as measured by adverse events and serious adverse events, including opioid overdose episodes
+* the earliest relapse day assessed at day 21. We administratively censored participants at week 24.
 
 ## Final Results
 * Between Jan 30, 2014, and May 25, 2016, we randomly assigned 570 participants to receive XR-NTX (n=283) or BUP-NX (n=287).
 * 204 participants inducted to XR-NTX treatment completed an average of 3·9 monthly injections (about 16 weeks treatment); 96 (47%) did not end medication early and completed the planned 24 week treatment phase
 * 270 participants inducted to BUP-NX treatment completed a median of 14 weeks of treatment
+
+# Creating an Adverse Event Column
+```{r}
+ad1 = opiod$AD1
+adv = function(x, names){
+  return(ifelse(x %in% names,1, 0))
+}
+patid <- main$PATID
+adverse = sapply(patid, adv, names = ad1$PATID)
+
+
+```
+
+
+# EDA
+
+## Uncensored vs. Censored
+```{r}
+
+censor = table(data.frame(event = opiod_df$event, arm = opiod_df$TRTSHOWN))
+censor = as.matrix(censor)
+censor = sweep(censor, 2, colSums(censor), FUN="/") # so more than half of the patients in both groups had relapse events
+
+ggplot(opiod_df, aes(x = TRTSHOWN, y = time)) + geom_boxplot()
+ggplot(opiod_df, aes(x = TRTSHOWN, y = VIWTLBS)) + geom_boxplot()
+
+```
+
+# Induction Failure
+```{r}
+inf <- opiod$INF
+
+# creating indicators for induction failures
+patid <- main$PATID
+induct_ind = function(x, names){
+  return(ifelse(x %in% names, 0, 1))
+}
+inducted = sapply(patid, induct_ind, names = inf$PATID)
+
+ind_failure = data.frame(PATID = patid, inducted = inducted)
+
+ind_failure = inner_join(opiod_df, ind_failure)
+
+```
+# Per Protocol Analysis
+
+```{r}
+pp <- opiod_df[ifelse(ind_failure$inducted==1, T, F), ]
+pp <- pp[!is.na(pp$event), ]
+
+
+
+```
+

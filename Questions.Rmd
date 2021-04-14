@@ -64,3 +64,74 @@ CPH:
 # Question 2
 
 Modeled using a Bayesian logistic regression.
+
+
+# Question 4
+```{r}
+load("opiod.RData")
+main = opiod$main
+asd = opiod$ASD
+asg = opiod$ASG
+asm = opiod$ASM
+asp = opiod$ASP
+asi = opiod$ASI
+dem = opiod$DEM
+dsm = opiod$DSM
+eom = opiod$EOM
+nms = opiod$NMS
+qol = opiod$QOL
+qlp = opiod$QLP
+fnd = opiod$FND
+mhx = opiod$MHX
+vis = opiod$VIS
+
+ad1 = opiod$AD1
+op_list = list(main, asd, asg, asm, asp, asi, dem, dsm, eom, nms, qol, qlp, fnd, mhx, vis)
+opiod_df <- op_list %>% reduce(full_join, by = "PATID")
+opiod_df <- opiod_df[, !grepl("X.", colnames(opiod_df), fixed = T)]
+mild = ad1$PATID[ad1$A1SEVRTY == 1]
+moderate = ad1$PATID[ad1$A1SEVRTY == 2]
+severe = ad1$PATID[ad1$A1SEVRTY == 3]
+# adding adverse events
+
+adv = function(x, names){
+  return(ifelse(x %in% names,1, 0))
+}
+patid <- main$PATID
+opiod_df$mild = sapply(patid, adv, names = mild)
+opiod_df$moderate = sapply(patid, adv, names = moderate)
+opiod_df$severe = sapply(patid, adv, names = severe)
+
+# bayes factors for each level
+options(mc.cores=2)
+fit_mild <- stan_glm(mild ~ TRTSHOWN, 
+                    prior = cauchy(0, 2.5),
+                    prior_intercept = cauchy(0,10),
+                    iter = 10000,
+                    chains = 2,
+                    family = "binomial",
+                    data = opiod_df)
+fit_moderate <- stan_glm(moderate ~ TRTSHOWN, 
+                    prior = cauchy(0, 2.5),
+                    prior_intercept = cauchy(0,10),
+                    iter = 10000,
+                    chains = 2,
+                    family = "binomial",
+                    data = opiod_df)
+fit_severe <- stan_glm(severe ~ TRTSHOWN, 
+                    prior = cauchy(0, 2.5),
+                    prior_intercept = cauchy(0,10),
+                    iter = 10000,
+                    chains = 2,
+                    family = "binomial",
+                    data = opiod_df)
+
+summary(fit_mild)
+summary(fit_moderate)
+summary(fit_severe)
+
+bayesfactor_parameters(fit_mild)
+bayesfactor_parameters(fit_moderate)
+bayesfactor_parameters(fit_severe)
+```
+

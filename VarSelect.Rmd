@@ -39,13 +39,7 @@ op_list = list(main, asd, asg, asm, asp, asi, dem, dsm, eom, nms, qol, qlp, fnd,
 # results in 570 by 119 matrix
 opiod_df <- op_list %>% reduce(full_join, by = "PATID")
 opiod_df <- opiod_df[, !grepl("X.", colnames(opiod_df), fixed = T)]
-# adding adverse events
-ad1 = opiod$AD1
-adv = function(x, names){
-  return(ifelse(x %in% names,1, 0))
-}
-patid <- main$PATID
-opiod_df$adverse = sapply(patid, adv, names = ad1$PATID)
+opiod_df <- opiod_df[!is.na(opiod_df$event), ]
 
 
 ```
@@ -180,10 +174,9 @@ Cox Proportional Hazards Model:
 
 ```{r}
 # fitting a model
-mcmc=list(nburn=2000, nsave=10000, nskip=0, ndisplay=1000)
+mcmc=list(nburn=2000, nsave=8000, nskip=0, ndisplay=1000)
 prior = list()
-f = Surv(time, event) ~ TRTSHOWN + I(MHOPIWDL > 5) + NMRXMED + factor(QLANXDEP) + VIBMI + adverse + 
-  I(ADOPI30D > 0) + ASBRTHDT + AMCHRMPR + DEGENDER + FNSMOKE
+f = Surv(time, event) ~ TRTSHOWN + I(MHOPIWDL > 5) + NMRXMED + factor(QLANXDEP) + ASBRTHDT + AMCHRMPR + DEGENDER + FNSMOKE + NMRDTX
 
 # variable selection
 vsel <- survregbayes(formula = f,
@@ -191,7 +184,7 @@ vsel <- survregbayes(formula = f,
                      mcmc = mcmc,
                      survmodel = "PH",
                      selection = T)
-sink(file='myoutput.txt')
+sink(file='myoutput_backup.txt')
 summary(vsel)
 sink()
 
@@ -200,7 +193,7 @@ sink()
 
 # interactions
 
-f = Surv(time, event) ~ (TRTSHOWN + I(MHOPIWDL > 5) + adverse  + I(ADOPI30D > 0))^2
+f = Surv(time, event) ~ (TRTSHOWN + I(MHOPIWDL > 5))^2
 
 vsel_is <- survregbayes(formula = f,
                      data = opiod_df,
@@ -212,12 +205,13 @@ sink(file='myoutput_interactions.txt')
 summary(vsel_is)
 sink()
 
-# best model: TRTSHOWNXR-NTX,I(MHOPIWDL > 5)TRUE,I(ADOPI30D > 0)TRUE,I(MHOPIWDL > 5)TRUE:adverse 
+# best model: TRTSHOWNXR-NTX
 
-f = Surv(time, event) ~ TRTSHOWN + I(MHOPIWDL > 5) + I(ADOPI30D > 0) + adverse + I(MHOPIWDL > 5):adverse
+f = Surv(time, event) ~ TRTSHOWN + I(MHOPIWDL > 5)
 
 cph_fit <- indeptCoxph(f,
                        data = opiod_df, 
+                       prior = list(S0 = 2.5^2 * diag(1, 2)),
                        mcmc = mcmc)
 
 sink(file='cph_output.txt')
@@ -228,22 +222,23 @@ sink()
 aft <- survregbayes(formula = f,
                      data = opiod_df,
                      survmodel = "AFT",
-                      mcmc = mcmc,
-                     selection = T)
+                    prior = list(S0 = 2.5^2 * diag(1, 2)),
+                      mcmc = mcmc)
 summary(aft)
 cph <- survregbayes(f,
                        data = opiod_df,
                        survmodel = "PH",
+                    prior = list(S0 = 2.5^2 * diag(1, 2)),
                        mcmc = mcmc)
 summary(cph)
 
-DIC <- c(3730.114, 3733.145)
-WAIC <- c(3730.513, 3732.439)
+DIC <- c(3737.309, 3752.968)
+WAIC <- c(3736.435, 3752.556)
 model <- c("CPH", "AFT")
 df <- data.frame(model = model, WAIC = WAIC, DIC = DIC)
 print(xtable(df))
 
-summ = summary(cph)
+summ = summary(cph_fit)
 df = summ$coeff
 df = df[, -3]
 print(xtable(df))
@@ -252,8 +247,7 @@ print(xtable(df))
 
 # Induction Logistic/Probit Regression
 ```{r}
-f = inducted ~ TRTSHOWN + I(MHOPIWDL > 5) + NMRXMED + factor(QLANXDEP) + VIBMI  + 
-  I(ADOPI30D > 0) + ASBRTHDT + AMCHRMPR + DEGENDER + FNSMOKE + AMHOSPTM + DSOPICRA + NMRDTX + NMWORKIN + QLHMLESS
+f = inducted ~ TRTSHOWN + I(MHOPIWDL > 5) + NMRXMED + factor(QLANXDEP) + VIBMI + ASBRTHDT + AMCHRMPR + DEGENDER + FNSMOKE + AMHOSPTM + DSOPICRA + NMRDTX + NMWORKIN + QLHMLESS
 
 options(mc.cores = 2)
 ind_fit <- stan_glm(f, 
@@ -268,13 +262,14 @@ bf
 
 # BF shows that TRTSHOWN and I(ADOPI30D > 0) are important
 options(mc.cores = 2)
-fit_inducted <- stan_glm(inducted ~ (TRTSHOWN + I(ADOPI30D > 0))^2, 
+fit_inducted <- stan_glm(inducted ~ (TRTSHOWN + NMRDTX)^2, 
                     prior = cauchy(0, 2.5),
                     prior_intercept = cauchy(0,10),
                     iter = 10000,
                     chains = 2,
                     family = "binomial",
                     data = ind_failure)
+preds = posterior_predict(fit_inducted, data = ind_failure)
 cis = posterior_interval(fit_inducted, prob = .95)
 fit = as.matrix(fit_inducted)
 medias = apply(fit, 2, quantile, prob = 0.5)
@@ -284,5 +279,55 @@ colnames(df) = c("Mean", "Median", "2.5%", "97.5%")
 print(xtable(df))
 
 
+# sensitivity
+preds = posterior_predict(fit_inducted, data = ind_failure)
+sens = t(apply(preds, 1, function(x, c) x * c, c = ind_failure$inducted))
+true_pos = rowSums(sens)
+neg <- t(apply(1-preds, 1, function(x, c) x * c, c = ind_failure$inducted))
+true_neg = rowSums(neg)
+sensitivity = true_pos/(true_pos + true_neg)
+mean(sensitivity)
+hist(sensitivity)
+quantile(sensitivity, probs = c(.025, 0.975))
+
+# Goodness of fit
+m = rowMeans(preds)
+hist(m)
+
+
+ggplot(ind_failure, aes(x = factor(event), y = ASBRTHDT)) + geom_boxplot()
+table(data.frame(inducted = ind_failure$inducted, treatment = ind_failure$TRTSHOWN))
+```
+
+# Per Protocol
+
+```{r}
+# fitting a model
+mcmc=list(nburn=2000, nsave=8000, nskip=0, ndisplay=1000)
+prior = list()
+f = Surv(time, event) ~ TRTSHOWN + I(MHOPIWDL > 5) + NMRXMED + factor(QLANXDEP) + ASBRTHDT + AMCHRMPR + DEGENDER + FNSMOKE + NMRDTX
+
+# variable selection
+pp_vsel <- survregbayes(formula = f,
+                     data = pp,
+                     mcmc = mcmc,
+                     survmodel = "PH",
+                     selection = T)
+sink(file='pp_vsel.txt')
+summary(pp_vsel)
+sink()
+
+f = Surv(time, event) ~ TRTSHOWN + I(MHOPIWDL > 5)
+# Largest probability model as ASBRTHDT
+pp_fit <- indeptCoxph(f,
+                       data = opiod_df, 
+                       prior = list(S0 = 2.5^2 * diag(1, 2)),
+                       mcmc = mcmc)
+summary(pp_fit)
+
+summ = summary(pp_fit)
+df = summ$coeff
+df = df[, -3]
+print(xtable(df))
 ```
 
